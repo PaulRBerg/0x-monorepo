@@ -32,7 +32,7 @@ contract TestLibFillResults {
         uint256 takerAssetFilledAmount
     )
         public
-        pure
+        view
         returns (LibFillResults.FillResults memory fillResults)
     {
         fillResults = LibFillResults.calculateFillResults(order, takerAssetFilledAmount);
@@ -47,7 +47,7 @@ contract TestLibFillResults {
         bool shouldMaximallyFillOrders
     )
         public
-        pure
+        view
         returns (LibFillResults.MatchedFillResults memory matchedFillResults)
     {
         matchedFillResults = LibFillResults.calculateMatchedFillResults(
